@@ -129,11 +129,11 @@ h2 {
     border-radius: 20px 0px 0px 20px;
     padding-left: 1rem;
     box-sizing: border-box;
+    width: 302px;
 }
 
 input:focus {
     outline: none;
-    width: 500px;
 }
 
 #search button {
@@ -245,9 +245,13 @@ button:hover {
     padding: 32px 36px 32px 32px;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 3fr 271px;
+    grid-template-rows: auto;
+    gap: 26px;
 }
 
-#projects {
+.content-cell {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -287,6 +291,7 @@ button:hover {
     font-family: "Satoshi-Medium", sans-serif;
     font-size: 1rem;
     color: var(--dark-grey);
+    line-height: 130%;
 }
 
 .project-icons {
@@ -298,4 +303,87 @@ button:hover {
 .project-icons svg {
     width: 1.5rem;
     height: 1.5rem;
+}
+
+.completed {
+    border-left: 8px solid var(--status-green);
+}
+
+.right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-block div {
+    font-family: "Satoshi-Bold", sans-serif;
+    font-size: 1rem;
+}
+
+.info-block p {
+    font-family: "Satoshi-Medium", sans-serif;
+    font-size: 0.875rem;
+    color: var(--dark-grey);
+    line-height: 130%;
+}
+
+.divider {
+    height: 1px;
+    background-color: var(--dark-grey);
+    opacity: 0.3;
+    margin-top: 10px;
+    margin-bottom: 11px;
+}
+
+.people-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.person {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.person img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.person-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.person-details div {
+    font-family: "Satoshi-Bold", sans-serif;
+    font-size: 1rem;
+    color: var(--black);
+}
+
+.person-details p {
+    font-family: "Satoshi-Medium", sans-serif;
+    font-size: 0.875rem;
+    color: var(--dark-grey);
 }
