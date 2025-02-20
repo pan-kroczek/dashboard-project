@@ -15,6 +15,7 @@ src:
 :root {
     --primary-color: #15572E;
     --secondary-color: #C4F9DA;
+    --black: #1A1A1A;
 }
 
 * {
@@ -32,8 +33,12 @@ html {
 .container {
     display: grid;
     grid-template-columns: minmax(288px, 1fr) 4fr;
+    grid-template-rows: auto;
     height: 100%;
+    background-color: var(--secondary-color);
 }
+
+/* SIDEBAR */
 
 .sidebar {
     display: flex;
@@ -41,6 +46,7 @@ html {
     gap: 4rem;
     padding: 1.5rem;
     background-color: var(--primary-color);
+    grid-row: span 2;
 }
 
 #logo {
@@ -80,4 +86,141 @@ html {
     font-family: "Satoshi-Medium", sans-serif;
     font-size: 1.25rem;
     color: white;
+}
+
+/* HEADER */
+
+.header {
+    background-color: white;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, .05);
+    height: 180px;
+    padding: 24px 36px 24px 32px;
+    box-sizing: border-box;
+}
+
+.search-and-profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+#search {
+    display: flex;
+    gap: none;
+}
+
+#search input {
+    border: none;
+    background-color: #EFEFEF;
+    font-family: "Satoshi-Medium", sans-serif;
+    font-size: 1rem;
+    height: 2.25rem;
+    border-radius: 20px 0px 0px 20px;
+    padding-left: 1rem;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    width: 500px;
+}
+
+#search button {
+    border: none;
+    background-color: #EFEFEF;
+    padding: 6px 12px;
+    box-sizing: border-box;
+    border-radius: 0px 20px 20px 0px;
+}
+
+#search button svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+}
+
+#profile {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+#profile svg {
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.logged-user {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.logged-user img {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 36px;
+}
+
+.logged-user div {
+    font-family: "Satoshi-Bold", sans-serif;
+    font-size: 1rem;
+}
+
+.greeting-and-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#greeting {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+#greeting img {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50px;
+}
+
+#greetings div {
+    display: flex;
+    flex-direction: column;
+    gap: none;
+}
+
+#greeting div:first-child {
+    font-family: "Satoshi-Medium", sans-serif;
+    font-size: 1rem;
+}
+
+.username-big {
+    font-family: "Satoshi-Bold", sans-serif;
+    font-size: 1.25rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.buttons button {
+    font-family: "Satoshi-Medium", sans-serif;
+    font-size: 1.125rem;
+    padding: 8px 32px 9px 32px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: var(--primary-color);
+}
+
+button:hover {
+    color: var(--primary-color);
+    background-color: white;
+    outline: 2px solid var(--primary-color);
+    outline-offset: -2px;
 }
