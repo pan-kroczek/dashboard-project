@@ -6,4 +6,4 @@ I wanted to make it more personal so I changed the paddings/margins, font, color
 I did not change the overall layout as it was a big part of the project itself.
 
 Figma file with both designs:
-[text](https://tinyurl.com/yjzmdccx)
+[link](https://tinyurl.com/yjzmdccx)
